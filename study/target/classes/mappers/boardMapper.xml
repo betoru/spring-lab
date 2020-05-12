@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boardMapper">
+   <insert id="">
+		INSERT INTO TEST_BOARD
+		(
+			IDX
+			,PARENT_IDX
+			,TITLE
+			,CONTENTS
+			,HIT_CNT
+			,DEL_GB
+			,CREA_DTM
+			,CREA_ID
+			)
+		VALUES
+		(
+			#{idx}
+			,#{parent_idx}
+			,#{title}
+			,#{contents}
+			,#{hit_cnt}
+			,#{del_gb}
+			,#{crea_dtm}
+			,#{crea_id}
+			)
+   </insert>
+</mapper>

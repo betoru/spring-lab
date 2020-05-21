@@ -12,12 +12,19 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
 	<!-- 오라클 접속 -->
-    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+<!--     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
         <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
         <property name="url" value="jdbc:log4jdbc:oracle:thin:@14.63.38.128:1521/EPLATZ"/>
         <property name="username" value="ECBASE"/>
         <property name="password" value="ecbaseTestDb"/>
-    </bean>
+    </bean> -->
+    
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://192.168.0.101/eplatz?characterEncoding=UTF-8" />
+        <property name="username" value="eplatz" />
+        <property name="password" value="dlvmffkcm!234" />
+    </bean>    
    
     <!-- Mybatis 연동 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

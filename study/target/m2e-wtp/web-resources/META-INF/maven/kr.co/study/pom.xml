@@ -23,6 +23,21 @@
 	</repositories>
 		
 	<dependencies>
+	
+		<!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.48</version>
+        </dependency>
+        
+        <!-- commons-dbcp -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>        
+        	
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
